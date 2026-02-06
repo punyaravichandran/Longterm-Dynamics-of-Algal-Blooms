@@ -34,7 +34,7 @@ This repository contains a Google Earth Engine (GEE)–based workflow to analyze
 ##  Methodology
 
 ### 1. Bloom Detection
-- Algal blooms are identified using a **fixed threshold**: chlorophyll>20 mg/m3
+- Algal blooms are identified using a **fixed threshold**: chlorophyll>3.4 mg/m3
 
 ### 2. Bloom Area Estimation
 - Bloom pixels are converted to **area (km²)** using pixel area calculations.
