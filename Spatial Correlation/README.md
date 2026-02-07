@@ -1,6 +1,4 @@
-# Chlorophyll Bloom Detection and Climate Covariate Analysis
-
-Detecting blooms and quantifying their lagged relationship with oceanographic variables (sea surface temperature).
+# Chlorophyll Bloom Detection and Identifying its Correlation (lagged) with Sea Surface Temperature
 
 ## Key Objectives
 
@@ -14,7 +12,7 @@ Detecting blooms and quantifying their lagged relationship with oceanographic va
 
 * Quantify lagged cross-correlation between blooms and SST
 
-* Export correlation maps for further statistical analysis
+* Export correlation maps
 
 ## Study Area
 
@@ -24,35 +22,19 @@ The region of interest (ROI) is defined using a user-uploaded Earth Engine asset
 Chlorophyll-a : MODISAqua L3SMI
 SST: MODISAqua L3SMI
 Time period: January 2003 – December 2020
-Temporal resolution: Monthly composites
 
 ## Methodology Overview
-1. **Monthly Compositing**
-Implemented using calendar filters in Earth Engine
+1. Monthly Compositing using calendar filters in GEE
 
-2. **Bloom Detection**
-Chlorophyll bloom threshold. Binary bloom masks are created and self-masked
+2. Bloom Detection using Chlorophyll bloom threshold
 
-3. **Object-Based Analysis**
-Connected bloom pixels are grouped. 
+3. Connected bloom pixels are grouped & Mean chlorophyll is calculated per bloom patch 
 
-Maximum object size = 500 pixels
+4. Time Variable Construction (A constant band is added for regression)
 
-Mean chlorophyll is calculated per bloom object
+5. De-trending using Ordinary least squares regression
 
-4. **Time Variable Construction**
-A constant band is added for regression modeling
+6. Lagged Cross-Correlation: Bloom intensity data are lagged relative to SST by 31 days. 
+Covariance matrix & Pearson correlation coefficient is derived
 
-5. **De-trending**
-Linear trends are removed using Ordinary least squares regression
-
-6. **Lagged Cross-Correlation**
-Bloom intensity data are lagged relative to SST by 31 days
-
-Covariance matrix is computed
-
-Pearson correlation coefficient is derived
-
-7. **Export**
-
-Final lagged correlation map is exported to Google Drive
+7. Final lagged correlation map is exported to Google Drive
