@@ -1,6 +1,6 @@
 # Summer Algal Bloom Trend Analysis (2003–2020)
 
-This repository contains a Google Earth Engine (GEE)–based workflow to analyze **summer algal bloom dynamics** in the **Ocean** using **MODIS-Aqua chlorophyll-a** observations. The study focuses on identifying **bloom extent**, **long-term trends**, and **statistical significance**.
+This repository contains a Google Earth Engine (GEE)–based workflow to analyze summer algal bloom dynamics in the Ocean using MODIS-Aqua chlorophyll-a observations. The study focuses on identifying bloom extent, long-term trends, and statistical significance.
 
 
 ##  Objectives
