@@ -15,9 +15,8 @@ This repository contains a Google Earth Engine (GEE)–based workflow to analyze
 
 ##  Study Region
 
-- **Region:** Northern Indian Ocean  
-- **Boundary:** User-defined polygon uploaded as a GEE asset  
-- **Spatial Resolution:** ~6 km  
+- **Region:** Any Ocean waters   
+- **Spatial Resolution:** 4 km  
 
 ---
 
