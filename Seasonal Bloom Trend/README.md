@@ -27,19 +27,19 @@ This repository contains a Google Earth Engine (GEE)–based workflow to analyze
 
 ##  Methodology
 
-### 1. Bloom Detection
+ 1. Bloom Detection
 - Algal blooms are identified using a fixed threshold: chlorophyll>3.4 mg/m3
 
-### 2. Bloom Area Estimation
+2. Bloom Area Estimation
 - Bloom pixels are converted to area (km²) using pixel area calculations.
 - Seasonal maximum bloom area is computed for each year.
 
-### 3. Trend Analysis
+3. Trend Analysis
 - Mann–Kendall test is applied to detect monotonic trends.
 - Sen’s slope estimator is used to quantify trend magnitude.
 - Spatial smoothing is applied using a circular neighborhood kernel.
 
-### 4. Significance Testing
+4. Significance Testing
 - Z-statistics and p-values are computed.
 
 
