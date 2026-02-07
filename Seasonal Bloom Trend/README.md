@@ -5,10 +5,10 @@ This repository contains a Google Earth Engine (GEE)–based workflow to analyze
 
 ##  Objectives
 
-- Quantify **summer (March–May) algal bloom area** using satellite chlorophyll-a
-- Detect **long-term trends** in bloom extent (2003–2020)
-- Estimate **trend magnitude** using **Sen’s slope**
-- Assess **statistical significance** via the **Mann–Kendall test**
+- Quantify summer (March–May) algal bloom area using satellite chlorophyll-a
+- Detect long-term trends in bloom extent (2003–2020)
+- Estimate trend magnitude using Sen’s slope
+- Assess statistical significance via the Mann–Kendall test
 
 
 ##  Study Region
@@ -19,41 +19,37 @@ This repository contains a Google Earth Engine (GEE)–based workflow to analyze
 
 ##  Dataset
 
-**MODIS-Aqua Level-3 Standard Mapped Image (L3SMI)**  
-- Product: `NASA/OCEANDATA/MODIS-Aqua/L3SMI`  
+**MODIS-Aqua Level-3 Standard Mapped Image (L3SMI)**   
 - Variable: `chlor_a` (chlorophyll-a concentration, mg m⁻³)  
-- Temporal coverage: **2003–2020**  
-- Seasonal filter: **March–May (summer)**  
+- Temporal coverage: 2003–2020  
+- Seasonal filter: March–May (Indian Summer season)  
 
 
 ##  Methodology
 
 ### 1. Bloom Detection
-- Algal blooms are identified using a **fixed threshold**: chlorophyll>3.4 mg/m3
+- Algal blooms are identified using a fixed threshold: chlorophyll>3.4 mg/m3
 
 ### 2. Bloom Area Estimation
-- Bloom pixels are converted to **area (km²)** using pixel area calculations.
-- Seasonal **maximum bloom area** is computed for each year.
+- Bloom pixels are converted to area (km²) using pixel area calculations.
+- Seasonal maximum bloom area is computed for each year.
 
 ### 3. Trend Analysis
-- **Mann–Kendall test** is applied to detect monotonic trends.
-- **Sen’s slope** estimator is used to quantify trend magnitude.
+- Mann–Kendall test is applied to detect monotonic trends.
+- Sen’s slope estimator is used to quantify trend magnitude.
 - Spatial smoothing is applied using a circular neighborhood kernel.
 
 ### 4. Significance Testing
-- Z-statistics and **p-values** are computed.
-- Trends with **p ≤ 0.05** are considered statistically significant.
+- Z-statistics and p-values are computed.
 
 
 ## Outputs
 
-The workflow generates the following raster products:
+The workflow generates the raster products & are exported as GeoTIFFs to Google Drive:
 
 - Mean summer bloom area (2003–2020)
 - Mann–Kendall trend statistic (smoothed)
 - Sen’s slope of bloom area change
 - Statistical significance mask (p ≤ 0.05)
-
-All outputs are exported as **GeoTIFFs** to Google Drive.
 
 
