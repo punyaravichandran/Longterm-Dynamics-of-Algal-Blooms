@@ -1,4 +1,4 @@
-# Python-based Google Earth Engine (GEE) workflow to perform temporal gap filling of MODIS-Aqua Level-3 chlorophyll-a data. 
+# Temporal gap filling of MODIS-Aqua Level-3 chlorophyll-a data. 
 
 The method fills missing pixels by interpolating between the nearest valid observations before and after a target date within a defined temporal window.
 
