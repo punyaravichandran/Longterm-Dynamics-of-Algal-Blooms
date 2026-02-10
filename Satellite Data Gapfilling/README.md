@@ -13,29 +13,26 @@ ocean shape file is loaded from a Google Earth Engine Asset. You may replace thi
 - Spatial resolution: ~4 km
 
 ## Methodology
-
 1. Earth Engine Initialization
-Authenticates and initializes GEE using a EE project ID
-Uses geemap for visualization
+- Authenticates and initializes GEE using a EE project ID
+- Uses geemap for visualization
 
 3. Data Preparation
 - Filters by: Date range
 - Clips images to ROI
-Preserves original masks
+- Preserves original masks
 
 3. Timestamp Handling
-Adds acquisition time (system:time_start) as a image band
-Enables pixel-wise temporal interpolation
+- Adds acquisition time (system:time_start) as a image band
+- Enables pixel-wise temporal interpolation
 
 4. Temporal Joining
-Defines a ±200-day time window
-Performs two joins:Images before & after each target image
+- Defines a ±200-day time window
+- Performs two joins:Images before & after each target image
 
 5. Linear Interpolation
-Computes interpolation ratio & interpolates pixel values. 
-Replaces masked pixels only (original valid data preserved)
+- Computes interpolation ratio & interpolates pixel values. 
+- Replaces masked pixels only (original valid data preserved)
 
 6. Output
-Produces a gap-filled ImageCollection
-
-Visualized as a mean chlorophyll map
+- Produces a gap-filled ImageCollection
