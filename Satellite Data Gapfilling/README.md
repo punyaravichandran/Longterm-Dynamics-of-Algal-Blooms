@@ -13,13 +13,14 @@ ocean shape file is loaded from a Google Earth Engine Asset. You may replace thi
 - Spatial resolution: ~4 km
 
 ## Methodology
+
 1. Earth Engine Initialization
 Authenticates and initializes GEE using a EE project ID
 Uses geemap for visualization
 
 3. Data Preparation
-Filters by: Date range
-Clips images to ROI
+- Filters by: Date range
+- Clips images to ROI
 Preserves original masks
 
 3. Timestamp Handling
