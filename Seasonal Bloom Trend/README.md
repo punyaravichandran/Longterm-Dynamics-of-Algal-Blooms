@@ -2,20 +2,10 @@
 
 This repository contains a Google Earth Engine (GEE)–based workflow to analyze summer algal bloom dynamics in the Ocean using MODIS-Aqua chlorophyll-a observations. The study focuses on identifying bloom extent, long-term trends, and statistical significance.
 
-
-##  Objectives
-
-- Quantify summer (March–May) algal bloom area using satellite chlorophyll-a
-- Detect long-term trends in bloom extent (2003–2020)
-- Estimate trend magnitude using Sen’s slope
-- Assess statistical significance via the Mann–Kendall test
-
-
 ##  Study Region
 
 - **Region:** Any Ocean waters   
 - **Spatial Resolution:** 4 km  
-
 
 ##  Dataset
 
@@ -23,7 +13,6 @@ This repository contains a Google Earth Engine (GEE)–based workflow to analyze
 - Variable: `chlor_a` (chlorophyll-a concentration, mg m⁻³)  
 - Temporal coverage: 2003–2020  
 - Seasonal filter: March–May (Indian Summer season)  
-
 
 ##  Methodology
 
@@ -42,7 +31,6 @@ This repository contains a Google Earth Engine (GEE)–based workflow to analyze
 4. Significance Testing
 - Z-statistics and p-values are computed.
 
-
 ## Outputs
 
 The workflow generates the raster products & are exported as GeoTIFFs to Google Drive:
@@ -51,5 +39,3 @@ The workflow generates the raster products & are exported as GeoTIFFs to Google 
 - Mann–Kendall trend statistic (smoothed)
 - Sen’s slope of bloom area change
 - Statistical significance mask (p ≤ 0.05)
-
-
