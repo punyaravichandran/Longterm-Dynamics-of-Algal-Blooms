@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "P"
+  given-names: "PUNYA"
+- family-names: "NIDAMANURI"
+  given-names: "RAMA RAO"
+title: "Longterm-Dynamics-of-Algal-Blooms"
+version: 1.0.0
+date-released: 2026-04-08
+url: "https://github.com/punyaravichandran/Longterm-Dynamics-of-Algal-Blooms"
